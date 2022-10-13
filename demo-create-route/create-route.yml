@@ -1,0 +1,11 @@
+- name: Expose a service externally
+  hosts: all
+  tasks: 
+  - name: Expose a service externally
+    community.okd.openshift_route:
+      service: c-cluster-too-db2u
+      namespace: db2wh
+      insecure_policy: allow
+      annotations:
+        haproxy.router.openshift.io/balance: roundrobin
+    register: route
