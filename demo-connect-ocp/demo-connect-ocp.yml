@@ -14,7 +14,7 @@
       community.okd.openshift_auth:
         host: "{{ host }}"
         validate_certs: no
-        username: admin
+        username: "{{ username }}"
         password: "{{ openshift_admin_password }}"
       register: openshift_auth_results
 
