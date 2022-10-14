@@ -1,5 +1,5 @@
 - name: Demo connect OCP
-  hosts: all
+  hosts: localhost
   module_defaults:
     group/k8s:
       host: https://console-openshift-console.apps.ankh-morpork.cp.fyre.ibm.com
@@ -8,11 +8,11 @@
   - block:
     # It's good practice to store login credentials in a secure vault and not
     # directly in playbooks.
-    - include_vars: openshift_passwords.yml
+    #- include_vars: openshift_passwords.yml
 
     - name: Log in (obtain access token)
       community.okd.openshift_auth:
-        username: admin
+        username: kubeadmin
         password: "{{ openshift_admin_password }}"
       register: openshift_auth_results
 
