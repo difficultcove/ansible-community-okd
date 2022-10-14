@@ -12,6 +12,7 @@
 
     - name: Log in (obtain access token)
       community.okd.openshift_auth:
+        host: "{{ host }}"
         username: kubeadmin
         password: "{{ openshift_admin_password }}"
       register: openshift_auth_results
