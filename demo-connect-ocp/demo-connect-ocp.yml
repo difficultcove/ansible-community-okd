@@ -13,7 +13,7 @@
     - name: Log in (obtain access token)
       community.okd.openshift_auth:
         host: "{{ host }}"
-        ca_cert: ./ingress-operator@1653553544.cer
+        validate_certs: no
         username: kubeadmin
         password: "{{ openshift_admin_password }}"
       register: openshift_auth_results
