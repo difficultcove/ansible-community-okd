@@ -3,7 +3,7 @@
   module_defaults:
     group/k8s:
       host: https://api.ankh-morpork.cp.fyre.ibm.com:6443
-      ca_cert: ingress-operator@1653553544.cer
+      ca_cert: ./certs/apps-ankh-morpork-cp-fyre-ibm-com-chain.pem
   tasks:
   - block:
     # It's good practice to store login credentials in a secure vault and not
