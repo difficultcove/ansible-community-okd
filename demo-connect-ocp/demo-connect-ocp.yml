@@ -7,7 +7,7 @@
   tasks:
   - block:
     # It's good practice to store login credentials in a secure vault and not
-    # directly in playbooks.
+    # directly in playbooks. 
     #- include_vars: openshift_passwords.yml
 
     - name: Log in (obtain access token)
